@@ -1,0 +1,245 @@
+python-msgpack (1.0.3-1build1) jammy; urgency=medium
+
+  * No-change rebuild with Python 3.10 only
+
+ -- Graham Inggs <ginggs@ubuntu.com>  Wed, 16 Mar 2022 23:10:48 +0000
+
+python-msgpack (1.0.3-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 17 Feb 2022 10:25:56 +0100
+
+python-msgpack (1.0.2-2) unstable; urgency=medium
+
+  * Upload to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 16 Aug 2021 19:02:19 +0200
+
+python-msgpack (1.0.2-1) experimental; urgency=medium
+
+  * New upstream release.
+
+ -- Thomas Goirand <zigo@debian.org>  Mon, 08 Mar 2021 15:56:22 +0100
+
+python-msgpack (1.0.0-6) unstable; urgency=medium
+
+  * Correctly breaks python3-pynvim and not python-pynvim.
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 24 Nov 2020 11:01:46 +0100
+
+python-msgpack (1.0.0-5) unstable; urgency=medium
+
+  * Add breaks: python-pynvim << 0.4.2~ (Closes: #975087).
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 20 Nov 2020 09:55:35 +0100
+
+python-msgpack (1.0.0-4) unstable; urgency=medium
+
+  * Fixed watch file again.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 14 Oct 2020 12:57:55 +0200
+
+python-msgpack (1.0.0-3) unstable; urgency=medium
+
+  * Fixed watch file.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 14 Oct 2020 12:47:01 +0200
+
+python-msgpack (1.0.0-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+  * Add a debian/salsa-ci.yml.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 14 Oct 2020 12:39:50 +0200
+
+python-msgpack (1.0.0-1) experimental; urgency=medium
+
+  [ Ondřej Nový ]
+  * Add breaks of older borgbackup (Closes: #953985)
+
+  [ Thomas Goirand ]
+  * New upstream release.
+  * d/python3-msgpack.docs: use README.md (instead of .rst).
+
+ -- Thomas Goirand <zigo@debian.org>  Thu, 24 Sep 2020 10:21:46 +0200
+
+python-msgpack (0.6.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Fix pkgos-dh_auto_install to install only for py3.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 14 Mar 2020 23:56:08 +0100
+
+python-msgpack (0.5.6-4) unstable; urgency=medium
+
+  * Removed remaining python3 build-depends (Closes: #937932).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 25 Feb 2020 11:58:04 +0100
+
+python-msgpack (0.5.6-3) unstable; urgency=medium
+
+  * Removed Python 2 support (Closes: #937932).
+
+ -- Thomas Goirand <zigo@debian.org>  Tue, 21 Jan 2020 16:03:27 +0100
+
+python-msgpack (0.5.6-2) unstable; urgency=medium
+
+  [ Gianfranco Costamagna ]
+  * Team upload
+  * Fix uscan watch uri
+  * Bump compat level to 12
+
+  [ Ondřej Nový ]
+  * d/tests: Use AUTOPKGTEST_TMP instead of ADTTMP
+  * d/control: Use team+openstack@tracker.debian.org as maintainer
+  * Running wrap-and-sort -bast.
+  * Use debhelper-compat instead of debian/compat.
+  * Bump Standards-Version to 4.4.1.
+  * Test all Python2/3 versions in autopkgtests (Closes: #943360).
+  * d/rules: Remove unnecessary overrides.
+
+ -- Ondřej Nový <onovy@debian.org>  Wed, 23 Oct 2019 23:04:34 +0200
+
+python-msgpack (0.5.6-1) unstable; urgency=medium
+
+  * Team upload
+  * New upstream release (Closes: #895733)
+
+ -- Gianfranco Costamagna <locutusofborg@debian.org>  Sun, 15 Apr 2018 18:44:47 +0200
+
+python-msgpack (0.5.1-3) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Add trailing tilde to min version depend to allow
+    backports
+  * Running wrap-and-sort -bast
+
+  [ Thomas Goirand ]
+  * Add debian/python{3,}-msgpack.pydist to help transition to the new upstream
+    egg name.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 23 Mar 2018 13:10:04 +0000
+
+python-msgpack (0.5.1-2) unstable; urgency=medium
+
+  * Uploading to unstable.
+
+ -- Thomas Goirand <zigo@debian.org>  Sun, 25 Feb 2018 20:39:57 +0000
+
+python-msgpack (0.5.1-1) experimental; urgency=medium
+
+  [ Daniel Baumann ]
+  * Updating vcs fields.
+  * Updating copyright format url.
+  * Updating maintainer field.
+  * Running wrap-and-sort -bast.
+  * Updating standards version to 4.0.0.
+  * Removing gbp.conf, not used anymore or should be specified in the
+    developers dotfiles.
+  * Updating standards version to 4.0.1.
+  * Updating standards version to 4.1.0.
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+
+  [ Thomas Goirand ]
+  * New upstream release: WARNING, upstream has renamed its egg-info as msgpack
+    instead of msgpack-python, which WILL break stuff in Debian.
+  * Switch to OpenStack packaging style.
+  * Renamed source package python-msgpack instead of msgpack-python.
+
+ -- Thomas Goirand <zigo@debian.org>  Wed, 14 Feb 2018 15:06:53 +0000
+
+msgpack-python (0.4.8-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release
+  * d/copyright: Fixed upstream URL
+  * Now running the unit tests using pytest, removed nose B-D.
+  * d/rules: Cleanup
+  * Require newer version of dh-python
+
+ -- Ondřej Nový <onovy@debian.org>  Mon, 01 Aug 2016 13:18:26 +0200
+
+msgpack-python (0.4.7-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Fixed homepage (https).
+  * Fixed VCS URLs (https).
+  * Added simple Debian tests.
+  * Standards-Version is 3.9.8 now (no change).
+  * d/copyright
+    - Added myself for Debian part.
+    - Fixed for new upstream release.
+  * Removed d/source/options (single-debian-patch)
+  * Added README.rst to python3-msgpack
+
+ -- Ondřej Nový <novy@ondrej.org>  Sat, 23 Apr 2016 23:22:11 +0200
+
+msgpack-python (0.4.6-1) unstable; urgency=medium
+
+  * New upstream release (Closes: #794678).
+  * Standards-Version is now 3.9.6 (no change).
+  * Watch file using the PyPi redirector.
+  * Removed version for python-all-dev build-depends.
+  * Removed Replaces:+Breaks msgpack-python (<< 0.3.0-1) now useless as Jessie
+    was released.
+
+ -- Thomas Goirand <zigo@debian.org>  Fri, 28 Aug 2015 16:10:08 +0000
+
+msgpack-python (0.4.2-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Sets the PKG OpenStack team as new Maintainer:, and set myself and Robert
+    as uploaders (after Robert agreed in bug report 752747#10).
+  * Renamed debian and master branches as debian-unstable and upstream-unstable
+    which is much more meaningful. Edited debian/gbp.conf accordingly.
+  * Fixed VCS URLs to use the PKG OpenStack repository.
+  * Ran wrap-and-sort.
+  * Overrides dh commands that don't need to run.
+  * Fixed Format: field of debian/copyright.
+  * Standards-Version: is now 3.9.5.
+  * Replaced Conflicts: with Breaks:, as per lintian suggestion.
+  * Now running the unit tests using nose.
+
+ -- Thomas Goirand <zigo@debian.org>  Sat, 05 Jul 2014 14:51:14 +0800
+
+msgpack-python (0.3.0-1) unstable; urgency=low
+
+  * New upstream release; closes: #719524.
+
+  [ Piotr Ożarowski ]
+  * Rename msgpack-python binary package to python-msgpack (following Debian
+    Python Policy).
+  * Add python3-msgpack binary package; closes: #719525.
+
+ -- Robert S. Edmonds <edmonds@debian.org>  Sat, 12 Oct 2013 13:00:58 -0400
+
+msgpack-python (0.2.0-1) unstable; urgency=low
+
+  * New upstream release.
+    - Fixes big-endian bug in msgpack/pack_template.h; closes: #633449.
+  * Add versioned build-dep on cython >= 0.15~; closes: #683083.
+
+ -- Robert S. Edmonds <edmonds@debian.org>  Sat, 28 Jul 2012 17:20:15 -0400
+
+msgpack-python (0.1.10-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Robert S. Edmonds <edmonds@debian.org>  Sun, 06 Nov 2011 15:16:20 -0500
+
+msgpack-python (0.1.9-2) unstable; urgency=low
+
+  * Clean msgpack/_msgpack.c; closes: #626949.
+  * Remove X-Python-Version from debian/control; closes: #626950.
+
+ -- Robert S. Edmonds <edmonds@debian.org>  Mon, 16 May 2011 13:47:02 -0400
+
+msgpack-python (0.1.9-1) unstable; urgency=low
+
+  * Initial release; closes: #622921.
+
+ -- Robert S. Edmonds <edmonds@debian.org>  Sat, 16 Apr 2011 14:24:09 -0400

@@ -1,0 +1,36 @@
+Source: python-msgpack
+Section: python
+Priority: optional
+Maintainer: Debian OpenStack <team+openstack@tracker.debian.org>
+Uploaders:
+ Robert S. Edmonds <edmonds@debian.org>,
+ Thomas Goirand <zigo@debian.org>,
+Build-Depends:
+ cython3,
+ debhelper-compat (= 12),
+ dh-python,
+ openstack-pkg-tools,
+ python3-all-dev,
+ python3-pytest,
+ python3-setuptools,
+Standards-Version: 4.4.1
+Vcs-Git: https://salsa.debian.org/openstack-team/python/python-msgpack.git
+Vcs-Browser: https://salsa.debian.org/openstack-team/python/python-msgpack
+Homepage: https://pypi.python.org/pypi/msgpack
+
+Package: python3-msgpack
+Architecture: any
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+ ${shlibs:Depends},
+Breaks:
+ borgbackup (<< 1.1.11-5~),
+ python3-pynvim (<< 0.4.2~),
+Description: Python 3 implementation of MessagePack format
+ MessagePack is a binary-based efficient object serialization format.
+ It enables the exchange of structured objects between many languages
+ like JSON. But unlike JSON, it is very fast and small.
+ .
+ This package contains a Python 3 extension module implementing the
+ MessagePack format.

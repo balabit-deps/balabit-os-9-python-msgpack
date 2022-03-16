@@ -1,0 +1,26 @@
+#!/usr/bin/make -f
+
+UPSTREAM_GIT := https://github.com/msgpack/msgpack-python
+include /usr/share/openstack-pkg-tools/pkgos.make
+
+export DEB_BUILD_MAINT_OPTIONS = hardening=+all
+
+%:
+	dh $@ --buildsystem=pybuild --with python3
+
+override_dh_auto_install:
+	pkgos-dh_auto_install --no-py2
+
+override_dh_python3:
+	dh_python3 --shebang=/usr/bin/python3
+
+override_dh_auto_test:
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+	set -e ; for pyvers in $(PYTHON3S); do \
+		python$$pyvers -m pytest test ; \
+	done
+endif
+
+override_dh_clean:
+	dh_clean -O--buildsystem=pybuild
+	rm -rf build
